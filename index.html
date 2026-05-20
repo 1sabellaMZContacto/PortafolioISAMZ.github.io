@@ -1,0 +1,559 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Isabella Martinez — Comunicación y Relaciones Corporativas</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- ★ CURSOR personalizado -->
+  <div class="custom-cursor" id="cursor"></div>
+  <div class="custom-cursor-follower" id="cursor-follower"></div>
+
+  <!-- ★ ESTRELLAS de fondo decorativas -->
+  <div class="stars-bg" aria-hidden="true">
+    <span class="star" style="top:8%;left:12%;font-size:10px;opacity:.35;">✦</span>
+    <span class="star" style="top:15%;left:78%;font-size:14px;opacity:.25;">✧</span>
+    <span class="star" style="top:32%;left:5%;font-size:8px;opacity:.4;">✦</span>
+    <span class="star" style="top:50%;left:93%;font-size:12px;opacity:.3;">✦</span>
+    <span class="star" style="top:68%;left:20%;font-size:9px;opacity:.35;">✧</span>
+    <span class="star" style="top:80%;left:85%;font-size:11px;opacity:.3;">✦</span>
+    <span class="star" style="top:90%;left:48%;font-size:8px;opacity:.25;">✧</span>
+    <span class="star" style="top:22%;left:52%;font-size:6px;opacity:.2;">✦</span>
+  </div>
+
+  <!-- ════════════ NAVEGACIÓN ════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">I.M<span class="logo-star">✦</span></div>
+    <ul class="nav-links">
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#habilidades">Perfil</a></li>
+      <li><a href="#experiencia">Corporativo</a></li>
+      <li><a href="#espacios">Espacios</a></li>
+      <li><a href="#trabajos">Portafolio</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="#sobre-mi" class="mobile-link">Sobre mí</a></li>
+      <li><a href="#habilidades" class="mobile-link">Perfil</a></li>
+      <li><a href="#experiencia" class="mobile-link">Corporativo</a></li>
+      <li><a href="#espacios" class="mobile-link">Espacios</a></li>
+      <li><a href="#trabajos" class="mobile-link">Portafolio</a></li>
+      <li><a href="#contacto" class="mobile-link">Contacto</a></li>
+    </ul>
+  </div>
+
+  <!-- ════════════ HERO ════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-text" aria-hidden="true">PORTFOLIO</div>
+
+    <div class="hero-content">
+      <div class="hero-tag">
+        <span class="tag-star">✦</span>
+        Comunicación y relaciones corporativas
+        <span class="tag-star">✦</span>
+      </div>
+
+      <h1 class="hero-title">
+        <span class="line-1">Isabella</span>
+        <span class="line-2 italic-serif">Martinez</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Soy comunicadora y relacionista corporativa, apasionada por conectar con las personas, descubrir oportunidades y dejar una <em>huella positiva</em>.
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="#trabajos" class="btn-primary">Ver Portafolio</a>
+        <a href="#contacto" class="btn-ghost">Contáctame</a>
+      </div>
+    </div>
+
+    <!-- Foto de portada -->
+    <div class="hero-photo-wrap">
+      <div class="hero-photo">
+        <div class="photo-placeholder">
+          <img src="https://drive.google.com/thumbnail?id=1BTRNL6pUnfX4-1t_ax9tXXJ5TE5J5sWi&sz=w1600" alt="Retrato de Isabella Martinez" />
+        </div>
+        <!-- Decoración sobre la foto -->
+        <div class="photo-deco-star top-right">✦</div>
+        <div class="photo-deco-star bottom-left">✧</div>
+        <div class="photo-badge">
+          <span>✦ Conectar · Comunicar · Inspirar ✦</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- scroll indicator -->
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ════════════ SOBRE MÍ ════════════ -->
+  <section class="section sobre-mi" id="sobre-mi">
+    <div class="section-inner">
+      <div class="section-label">
+        <span class="label-star">✦</span> 01 / Sobre mí
+      </div>
+
+      <div class="sobre-grid">
+        <div class="sobre-text">
+          <h2 class="section-title">Hola, soy <em>Isabella</em></h2>
+          <p class="body-text">
+            Soy una mujer apasionada por conectar con las personas y descubrir nuevas oportunidades de crecimiento cada día. Me caracterizo por ser empática, sociable, diligente, recursiva y con capacidad de liderazgo.
+          </p>
+          <p class="body-text">
+            Disfruto aportar de manera significativa en cada proyecto del que hago parte, siempre con compromiso, entusiasmo y sentido humano. Mi propósito es dejar una huella positiva en la vida de los demás, crecer constantemente y dedicarme a aquello que me inspira y me hace feliz.
+          </p>
+
+          <div class="sobre-stats">
+            <div class="stat-item">
+              <span class="stat-number word-stat">Empática</span>
+              <span class="stat-label">Con las personas</span>
+            </div>
+            <div class="stat-divider">✦</div>
+            <div class="stat-item">
+              <span class="stat-number word-stat">Recursiva</span>
+              <span class="stat-label">Ante los retos</span>
+            </div>
+            <div class="stat-divider">✦</div>
+            <div class="stat-item">
+              <span class="stat-number word-stat">Líder</span>
+              <span class="stat-label">Con sentido humano</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sobre-visual">
+          <div class="visual-card card-main">
+            <div class="card-inner-photo">
+              <img src="https://drive.google.com/thumbnail?id=1CjKyutWxz0qZtNISPVi2Fpl1l2aem6vg&sz=w1600" alt="Isabella en un momento reflexivo" />
+            </div>
+            <div class="card-caption">Isabella Martinez · Medellín, CO</div>
+          </div>
+          <div class="visual-card card-accent">
+            <div class="accent-text">"Mi propósito es dejar una huella positiva."</div>
+            <div class="accent-star">✦</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ HABILIDADES ════════════ -->
+  <section class="section habilidades" id="habilidades">
+    <div class="section-inner">
+      <div class="section-label">
+        <span class="label-star">✦</span> 02 / Perfil
+      </div>
+      <h2 class="section-title centered">Lo que me <em>define</em></h2>
+      <p class="section-intro centered">Una mezcla de sensibilidad, comunicación, liderazgo y curiosidad por el crecimiento personal y profesional.</p>
+
+      <div class="corporate-feature">
+        <div class="corporate-image">
+          <img src="https://drive.google.com/thumbnail?id=1H-5Bvs57PGbsX90qR2G1SuaawEKCOVOM&sz=w1600" alt="Isabella en un entorno corporativo" />
+        </div>
+        <div class="corporate-copy">
+          <span class="project-tag">Relaciones corporativas</span>
+          <h3>Conecto con públicos desde la estrategia y el sentido humano</h3>
+          <p>Mi enfoque combina comunicación, empatía y lectura del entorno para construir vínculos claros entre personas, organizaciones y audiencias.</p>
+        </div>
+      </div>
+
+      <div class="skills-grid">
+
+        <div class="skill-card" data-index="0">
+          <div class="skill-icon">★</div>
+          <h3 class="skill-name">Soy soñadora</h3>
+          <p class="skill-desc">Creo en el crecimiento constante y en dedicarme a aquello que me inspira, me mueve y me hace feliz.</p>
+        </div>
+
+        <div class="skill-card" data-index="1">
+          <div class="skill-icon">★</div>
+          <h3 class="skill-name">Soy comunicadora corporativa</h3>
+          <p class="skill-desc">Tengo facilidad para conectar ideas, personas y mensajes dentro de entornos profesionales.</p>
+        </div>
+
+        <div class="skill-card" data-index="2">
+          <div class="skill-icon">★</div>
+          <h3 class="skill-name">Construyo relaciones</h3>
+          <p class="skill-desc">Me oriento a crear vínculos auténticos, escuchar y aportar desde la cercanía.</p>
+        </div>
+
+        <div class="skill-card" data-index="3">
+          <div class="skill-icon">★</div>
+          <h3 class="skill-name">Me gusta presentar</h3>
+          <p class="skill-desc">Cuento con experiencia en escenarios como congresos, ceremonias y charlas.</p>
+        </div>
+
+        <div class="skill-card" data-index="4">
+          <div class="skill-icon">★</div>
+          <h3 class="skill-name">Disfruto los deportes</h3>
+          <p class="skill-desc">Encuentro en el movimiento disciplina, energía y una forma de mantenerme conectada conmigo misma.</p>
+        </div>
+
+        <div class="skill-card" data-index="5">
+          <div class="skill-icon">★</div>
+          <h3 class="skill-name">Leo de corazón</h3>
+          <p class="skill-desc">La lectura alimenta mi sensibilidad, mi criterio y mi manera de comprender diferentes realidades.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Estrellas decorativas de sección -->
+    <div class="section-stars" aria-hidden="true">
+      <span style="top:10%;right:5%">✦</span>
+      <span style="bottom:15%;left:3%">✧</span>
+    </div>
+  </section>
+
+  <!-- ════════════ EXPERIENCIA ════════════ -->
+  <section class="section experiencia" id="experiencia">
+    <div class="section-inner">
+      <div class="section-label">
+        <span class="label-star">✦</span> 03 / Corporativo
+      </div>
+      <h2 class="section-title">Mi enfoque <em>corporativo</em></h2>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-dot">✦</div>
+          <div class="timeline-date">Estrategia</div>
+          <div class="timeline-content">
+            <h3>Conecto con públicos</h3>
+            <span class="company-tag">Comunicación corporativa</span>
+            <p>Desarrollo estrategias para conectar con los públicos, entendiendo que cada audiencia necesita claridad, cercanía y mensajes pensados desde su contexto.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot">✦</div>
+          <div class="timeline-date">Crisis</div>
+          <div class="timeline-content">
+            <h3>Gestiono momentos de crisis</h3>
+            <span class="company-tag">Relación y respuesta</span>
+            <p>Cuento con interés y capacidades para acompañar situaciones retadoras desde la comunicación, la serenidad y la construcción de respuestas oportunas.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot">✦</div>
+          <div class="timeline-date">Escenario</div>
+          <div class="timeline-content">
+            <h3>Presento eventos</h3>
+            <span class="company-tag">Congresos · ceremonias · charlas</span>
+            <p>Tengo experiencia en presentación de congresos, ceremonias y charlas, donde combino presencia, comunicación y conexión con el público.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot">✦</div>
+          <div class="timeline-date">Propósito</div>
+          <div class="timeline-content">
+            <h3>Aporto con sentido humano</h3>
+            <span class="company-tag">Compromiso personal</span>
+            <p>Mi manera de trabajar está guiada por el entusiasmo, la empatía y el deseo de aportar de forma significativa en cada espacio del que hago parte.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ ESPACIOS ════════════ -->
+  <section class="section espacios" id="espacios">
+    <div class="section-inner">
+      <div class="section-label">
+        <span class="label-star">✦</span> 04 / Espacios
+      </div>
+      <div class="gallery-heading">
+        <div>
+          <h2 class="section-title">Espacios donde <em>he contribuido</em></h2>
+          <p class="section-intro">Momentos, escenarios y experiencias que reflejan mi forma de conectar, comunicar y estar presente.</p>
+        </div>
+        <div class="gallery-controls" aria-label="Controles de galería">
+          <button class="gallery-btn" type="button" data-gallery-prev aria-label="Foto anterior">‹</button>
+          <button class="gallery-btn" type="button" data-gallery-next aria-label="Foto siguiente">›</button>
+        </div>
+      </div>
+
+      <div class="gallery-shell">
+        <div class="gallery-track" data-gallery-track>
+          <figure class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?id=1VANDpL1yOozHv3p1gklGA3OdxtA2rJ8_&sz=w1600" alt="Foto con diploma de PRSSA" />
+          </figure>
+          <figure class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?id=1stDvnWRhMRpfpiG_akWLY_guUiDhK2W3&sz=w1600" alt="Foto en evento como presentadora" />
+          </figure>
+          <figure class="gallery-item wide">
+            <img src="https://drive.google.com/thumbnail?id=1L7LWZ6GOAI4h_NFnZx0LiQKi7Bc_ERZM&sz=w1600" alt="Espacio de contribución de Isabella" />
+          </figure>
+          <figure class="gallery-item tall">
+            <img src="https://drive.google.com/thumbnail?id=1wSKbhrlg_lihHJGXymyOxwHDmhGOLOGP&sz=w1600" alt="Isabella participando en un espacio profesional" />
+          </figure>
+          <figure class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?id=1oGrXhmJXzBsXb7s_bFTyhnrF4HzNsfZz&sz=w1600" alt="Registro de un espacio de contribución" />
+          </figure>
+          <figure class="gallery-item tall">
+            <img src="https://drive.google.com/thumbnail?id=1cK3pIpcwqVUoRG0Fc1-QP77z6OcuIIj3&sz=w1600" alt="Momento personal y profesional de Isabella" />
+          </figure>
+          <figure class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?id=10i-77TOGn28bzv7mIIZrl2xsXNUh576R&sz=w1600" alt="Espacio compartido con otras personas" />
+          </figure>
+          <figure class="gallery-item tall">
+            <img src="https://drive.google.com/thumbnail?id=14z2nlGokRGrAWd3DeraCVCo5QwmBHfmJ&sz=w1600" alt="Registro visual de participación de Isabella" />
+          </figure>
+          <figure class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?id=1TjYAjc5EIZueeEd3XHOhj817fhPD-M3K&sz=w1600" alt="Registro de una experiencia en la que he contribuido" />
+          </figure>
+          <figure class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?id=1BM1P52NVtSwXEGvPff0KpN-iSkBp4-ge&sz=w1600" alt="Momento destacado de mi participación" />
+          </figure>
+          <figure class="gallery-item">
+            <img src="https://drive.google.com/thumbnail?id=137UaVXu4EkHV_hm1fDHtsQLKDd8dHCss&sz=w1600" alt="Registro visual de un espacio profesional" />
+          </figure>
+          <figure class="gallery-item tall">
+            <img src="https://drive.google.com/thumbnail?id=15v-MUCGFFe77wIH1-olxRuoaVh4vZs_o&sz=w1600" alt="Evidencia de un espacio de comunicación y participación" />
+          </figure>
+          <figure class="gallery-item tall">
+            <img src="https://drive.google.com/thumbnail?id=13LeJW1MDGCZkzYcu-iuwnwWU8UTApssP&sz=w1600" alt="Registro de participación en evento" />
+          </figure>
+          <figure class="gallery-item tall">
+            <img src="https://drive.google.com/thumbnail?id=1pjnOqAfQpjjVw-Ti6oEgCIcmPbVCsC0U&sz=w1600" alt="Contenido visual de una experiencia de portafolio" />
+          </figure>
+          <figure class="gallery-item tall">
+            <img src="https://drive.google.com/thumbnail?id=1VlOqGPD7BcZbG-a-TROh9JfC_Mz7MgxU&sz=w1600" alt="Momento de comunicación en un espacio profesional" />
+          </figure>
+          <figure class="gallery-item wide">
+            <img src="https://drive.google.com/thumbnail?id=1dVTkzxbZXMUTml1mP1D237DFwAjuiUHT&sz=w1600" alt="Espacio amplio de participación y encuentro" />
+          </figure>
+        </div>
+      </div>
+
+      <div class="photo-stories">
+        <article class="photo-story featured">
+          <span class="project-tag">PRSSA Colombia Chapter</span>
+          <h3>Soy presidenta de PRSSA Colombia Chapter</h3>
+          <p>En este espacio descubrí el poder de la comunicación para transformar realidades y dejar huella en las personas. Desde este rol he acompañado el crecimiento profesional y personal de quienes hacen parte del capítulo, impulsando procesos de aprendizaje, liderazgo y conexión con propósito.</p>
+        </article>
+
+        <article class="photo-story">
+          <span class="project-tag">Eventos</span>
+          <h3>Me desempeño como presentadora y maestra de ceremonia</h3>
+          <p>Esta experiencia me ha permitido fortalecer mis habilidades de comunicación oral, manejo de público y conexión con distintas audiencias. Busco transmitir seguridad, cercanía y profesionalismo en cada encuentro.</p>
+        </article>
+
+        <article class="photo-story">
+          <span class="project-tag">Congresos</span>
+          <h3>Disfruto organizar y crear eventos</h3>
+          <p>Me motiva aportar ideas, coordinar detalles y contribuir a que cada experiencia tenga sentido, orden y propósito. Me gusta hacer parte de espacios que conectan personas, generan aprendizajes y dejan una huella positiva.</p>
+        </article>
+
+        <article class="photo-story">
+          <span class="project-tag">Liderazgo</span>
+          <h3>Lidero para servir, inspirar y acompañar</h3>
+          <p>El liderazgo siempre ha estado en mí como una forma de guiar con empatía, propósito y compromiso. Por eso sigo alimentando mi esencia a través de la Escuela de Líderes, un diplomado que fortalece mi crecimiento personal y profesional.</p>
+        </article>
+      </div>
+
+      <div class="presenter-experience">
+        <div>
+          <span class="project-tag">Mi experiencia como presentadora</span>
+          <h3>Escenarios donde he comunicado con propósito</h3>
+        </div>
+        <ul>
+          <li>Maestra de ceremonia - Décimo noveno Salón del Inversionista, Universidad de Medellín, 2024.</li>
+          <li>Presentadora - 3ª edición de las Olimpiadas de Negocios Internacionales, Universidad de Medellín, 2024.</li>
+          <li>Conductora de entrevista - IX Congreso Internacional de Comunicación Estratégica, Universidad de Medellín, 2024.</li>
+          <li>Maestra de ceremonia - Encuentro de Comunicadores del Sector Social, Federación Antioqueña de ONG, Universidad de Medellín.</li>
+          <li>Presentadora - Dearte Universe, Universidad de Medellín.</li>
+          <li>Presentadora - Talleres de Formación Artística y Cultural del Programa de Planeación del Desarrollo Local y Presupuesto Participativo, comunas 5, 10 y 80, 2026.</li>
+          <li>Maestra de ceremonia - Encryption Day, Internet Society Colombian Chapter, 2026.</li>
+          <li>Maestra de ceremonia - I Congreso Internacional de Innovación Educativa y Prácticas Pedagógicas Inclusivas Avancemos, Grupo Educativo, 2026.</li>
+          <li>Presentadora - Premios Huella, Universidad de Medellín, 2026.</li>
+          <li>Presentadora - Encuentro de comunicación con Nubank, 2026.</li>
+          <li>Presentadora - Charla “Cumplimiento como unidad de inteligencia de negocio”, Universidad de Medellín, 2026.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ TRABAJOS ════════════ -->
+  <section class="section trabajos" id="trabajos">
+    <div class="section-inner">
+      <div class="section-label">
+        <span class="label-star">✦</span> 05 / Portafolio
+      </div>
+      <h2 class="section-title centered">Trabajos de <em>portafolio</em></h2>
+
+      <div class="projects-grid">
+
+        <div class="project-card large">
+          <div class="project-img">
+            <div class="project-img-placeholder">
+              <iframe class="drive-embed" src="https://drive.google.com/file/d/1tpn1EWYi8Wa9WkwL-W6ezhoLpgQEBsul/preview" title="Video Carrera Valientes" allow="autoplay; fullscreen"></iframe>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">Video</span>
+            <h3>Carrera Valientes</h3>
+            <p>Un registro audiovisual de espacios donde puedo comunicar, acompañar y conectar con públicos desde la energía del encuentro.</p>
+            <div class="project-tools">
+              <span>Comunicación</span>
+              <span>Presencia</span>
+              <span>Experiencia</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-img">
+            <div class="project-img-placeholder">
+              <iframe class="drive-embed" src="https://drive.google.com/file/d/1iKx-qzhmpdkmgJoFArvS4hVd9NomOjqS/preview" title="Video discurso de cierre" allow="autoplay; fullscreen"></iframe>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">Discurso</span>
+            <h3>Discurso de cierre</h3>
+            <p>Un momento de cierre donde la palabra, el tono y la intención ayudan a conectar con quienes escuchan.</p>
+            <div class="project-tools">
+              <span>Oratoria</span>
+              <span>Mensaje</span>
+              <span>Escenario</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-img">
+            <div class="project-img-placeholder">
+              <img src="https://drive.google.com/thumbnail?id=1VANDpL1yOozHv3p1gklGA3OdxtA2rJ8_&sz=w1600" alt="Isabella en presentación de portafolio" />
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">Presentación</span>
+            <h3>Presencia en espacios de liderazgo</h3>
+            <p>Me interesa participar en escenarios donde pueda representar ideas, conectar con personas y aportar desde la comunicación.</p>
+            <div class="project-tools">
+              <span>Liderazgo</span>
+              <span>Conexión</span>
+              <span>Propósito</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-img">
+            <div class="project-img-placeholder">
+              <iframe class="pdf-cover" src="https://drive.google.com/file/d/1pwmi0Nh2nCkLdsvAkLN5f0BueHA6-eWB/preview" title="Portada del PDF Junín"></iframe>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">Documento</span>
+            <h3>Junín</h3>
+            <p>Material de portafolio disponible para revisar como documento complementario.</p>
+            <div class="project-tools">
+              <a href="https://drive.google.com/file/d/1pwmi0Nh2nCkLdsvAkLN5f0BueHA6-eWB/view?usp=sharing" target="_blank" rel="noopener">Abrir PDF</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="section-stars" aria-hidden="true">
+      <span style="top:5%;left:2%">✧</span>
+      <span style="bottom:10%;right:4%">✦</span>
+    </div>
+  </section>
+
+  <!-- ════════════ BANNER QUOTE ════════════ -->
+  <section class="quote-banner">
+    <div class="quote-inner">
+      <div class="quote-star">✦</div>
+      <blockquote>
+        "Conectar con las personas también es una forma de transformar."
+      </blockquote>
+      <div class="quote-star">✦</div>
+    </div>
+    <!-- marquee decorativo -->
+    <div class="marquee-wrap" aria-hidden="true">
+      <div class="marquee-track">
+        <span>COMUNICACIÓN ✦ RELACIONES ✦ PROPÓSITO ✦ EMPATÍA ✦ LIDERAZGO ✦ PÚBLICOS ✦ ESCENARIO ✦ CRISIS ✦ </span>
+        <span>COMUNICACIÓN ✦ RELACIONES ✦ PROPÓSITO ✦ EMPATÍA ✦ LIDERAZGO ✦ PÚBLICOS ✦ ESCENARIO ✦ CRISIS ✦ </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ CONTACTO ════════════ -->
+  <section class="section contacto" id="contacto">
+    <div class="section-inner">
+      <div class="section-label">
+        <span class="label-star">✦</span> 06 / Contacto
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-left">
+          <h2 class="section-title">Conversemos <em>junt@s</em></h2>
+          <p class="body-text">Si quieres conectar, proponer una colaboración o invitarme a un espacio de presentación, puedes escribirme por estos canales.</p>
+
+          <div class="contact-links">
+            <a href="mailto:Isabellamarzea0601@gmail.com" class="contact-link">
+              <span class="link-icon">✉</span>
+              Isabellamarzea0601@gmail.com
+            </a>
+            <a href="https://instagram.com/isazeaa" target="_blank" rel="noopener" class="contact-link instagram-link">
+              <span class="link-icon">ig</span>
+              @isazeaa
+            </a>
+            <a href="https://www.linkedin.com/in/isabella-martínez-zea-22a294382?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" class="contact-link">
+              <span class="link-icon">in</span>
+              LinkedIn
+            </a>
+            <a href="tel:+573001234567" class="contact-link">
+              <span class="link-icon">☏</span>
+              +57 300 123 4567
+            </a>
+          </div>
+
+          <div class="contact-location">
+            <span class="label-star">✦</span>
+            Medellín, Colombia · Disponible remotamente
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ FOOTER ════════════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">I.M. <span class="logo-star">✦</span></div>
+      <div class="footer-copy">© 2026 Isabella Martinez · Todos los derechos reservados</div>
+      <div class="footer-stars" aria-hidden="true">✦ ✧ ✦</div>
+    </div>
+  </footer>
+
+</body>
+</html>
