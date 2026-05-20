@@ -6,10 +6,6 @@
   const qs = (selector, scope = document) => scope.querySelector(selector);
   const qsa = (selector, scope = document) => [...scope.querySelectorAll(selector)];
 
-  const applyResponsiveLayout = () => {
-    document.documentElement.classList.toggle("is-mobile-layout", window.innerWidth <= 760);
-  };
-
   const navbar = qs("#navbar");
   const hamburger = qs("#hamburger");
   const mobileMenu = qs("#mobile-menu");
@@ -17,9 +13,6 @@
   if (hasScrollTrigger) {
     gsap.registerPlugin(ScrollTrigger);
   }
-
-  applyResponsiveLayout();
-  window.addEventListener("resize", applyResponsiveLayout, { passive: true });
 
   const setNavbarState = () => {
     navbar?.classList.toggle("scrolled", window.scrollY > 24);
